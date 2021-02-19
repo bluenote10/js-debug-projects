@@ -15,7 +15,7 @@ afterAll(async () => {
   console.log("after all");
 });
 
-it("should do 1", async () => {
+test("some test", async () => {
   console.log("before request");
   await simulateRequest();
   console.log("after request");
