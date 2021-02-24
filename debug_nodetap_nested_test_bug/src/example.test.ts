@@ -34,11 +34,11 @@ t.test("Endpoint test (2)", async () => {
   app.close();
 });
 
-t.test("Endpoint test (3)", async () => {
+t.test("Endpoint test (3)", async (t) => {
   const app = await buildApp();
 
-  t.test("sub test", async () => {
-    // Executed within t.test: Fails
+  await t.test("sub test", async () => {
+    // Works now, requires await t.test and using the sub `t`.
     const response = await supertest(app.server).get("/").expect(200);
     t.equals(response.status, 200);
   });
