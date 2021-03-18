@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fast-json-stringify": "^2.4.2",
-    "fastify": "^3.13.0",
+    "fast-json-stringify": "^2.5.2",
+    "fastify": "^3.14.0",
     "pino-pretty": "^4.7.1"
   }
 }
