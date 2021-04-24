@@ -1,0 +1,137 @@
+console.log("beforeCompile");
+console.log("afterTypeScriptCheck");
+
+
+allDummys("a");
+allDummys("b");
+allDummys("c");
+allDummys("d");
+allDummys("e");
+allDummys("foo");
+
+
+type Dummy = "a" | "b" | "c" | "d" | "e" | "foo";
+
+function onlyTakesFoo(foo: "foo") {
+  console.log("foo");
+}
+
+function dummy1(x: Dummy) {
+  if (x !== "a") {
+    if (x !== "b") {
+      if (x !== "c") {
+        if (x !== "d") {
+          if (x !== "e") {
+            onlyTakesFoo(x);
+          }
+        }
+      }
+    }
+  }
+}
+
+function dummy2(x: Dummy) {
+  if (x !== "a") {
+    if (x !== "b") {
+      if (x !== "c") {
+        if (x !== "d") {
+          if (x !== "e") {
+            onlyTakesFoo(x);
+          }
+        }
+      }
+    }
+  }
+}
+
+function dummy3(x: Dummy) {
+  if (x !== "a") {
+    if (x !== "b") {
+      if (x !== "c") {
+        if (x !== "d") {
+          if (x !== "e") {
+            onlyTakesFoo(x);
+          }
+        }
+      }
+    }
+  }
+}
+
+function dummy4(x: Dummy) {
+  if (x !== "a") {
+    if (x !== "b") {
+      if (x !== "c") {
+        if (x !== "d") {
+          if (x !== "e") {
+            onlyTakesFoo(x);
+          }
+        }
+      }
+    }
+  }
+}
+
+function dummy5(x: Dummy) {
+  if (x !== "a") {
+    if (x !== "b") {
+      if (x !== "c") {
+        if (x !== "d") {
+          if (x !== "e") {
+            onlyTakesFoo(x);
+          }
+        }
+      }
+    }
+  }
+}
+
+function dummy6(x: Dummy) {
+  if (x !== "a") {
+    if (x !== "b") {
+      if (x !== "c") {
+        if (x !== "d") {
+          if (x !== "e") {
+            onlyTakesFoo(x);
+          }
+        }
+      }
+    }
+  }
+}
+
+function allDummys(x: Dummy) {
+  dummy1(x);
+  dummy2(x);
+  dummy3(x);
+  dummy4(x);
+  dummy5(x);
+  dummy6(x);
+}
+
+allDummys("a");
+allDummys("b");
+allDummys("c");
+allDummys("d");
+allDummys("e");
+allDummys("foo");
+
+export function deriveStyledIntrisic(
+  name: keyof JSX.IntrinsicElements,
+  className: string
+) {
+  const wrapped: React.FC<JSX.IntrinsicElements[typeof name]> = (props) =>
+    React.createElement(
+      name,
+      { ...props, className: className },
+      props.children
+    );
+  return wrapped;
+}
+
+export function test() {
+  // return <CustomDiv onClick={() => console.log("clicked")}>Test</CustomDiv>;
+  const FooButton = deriveStyledIntrisic("button", "myCssClass");
+  return <FooButton onClick={() => console.log("clicked")}>Test</FooButton>;
+}
+
