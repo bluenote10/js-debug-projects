@@ -13,12 +13,12 @@ ReactDOM.render(
 );
 
 // The following code merely exists to slow down the TS compilation
-// of this files (it slows it down a lot, several seconds on my machine!).
-// To trigger a recompulation change the number suffix (it looks like
+// of this file (it slows it down a lot, several seconds on my machine!).
+// To trigger a recompilation change the number suffix (it looks like
 // simply re-saving / touching the file isn't sufficient to cause a
 // recompilation).
 
-export function complexGeneric124(name: keyof JSX.IntrinsicElements) {
+export function complexGeneric1234(name: keyof JSX.IntrinsicElements) {
   const wrapped: React.FC<JSX.IntrinsicElements[typeof name]> = (props) =>
     React.createElement(name, { ...props }, props.children);
   return wrapped;
