@@ -1,1 +1,1 @@
-console.log(performance.now());
+const time = performance.now();
