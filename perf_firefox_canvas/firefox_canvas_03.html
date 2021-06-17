@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Firefox Canvas</title>
+  <meta name="description" content="Firefox Canvas">
+
+  <style>
+    #canvas {
+      width: 100%;
+      height: 72vh;
+      border: 1px solid #DDD;
+    }
+
+    #ta {
+      width: 100%;
+      height: 24vh;
+    }
+  </style>
+
+</head>
+
+<body>
+  <select id="select" autocomplete="off">
+    <option>Single circulating rect</option>
+    <option>Random rects (1000)</option>
+  </select>
+  <textarea id="ta">Sampling...</textarea>
+  <canvas id="canvas" />
+  <script src="firefox_canvas_03.js"></script>
+</body>
+</html>
