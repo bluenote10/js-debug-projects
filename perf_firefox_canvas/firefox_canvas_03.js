@@ -92,7 +92,7 @@
     s += "Largest delta values [ms]:  ";
     s +=
       deltas
-        .slice(deltasRAF.length - numToShow)
+        .slice(deltas.length - numToShow)
         .map((x) => x.toFixed(3))
         .join(" ") + "\n";
 
